@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+            </style> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <title>Sketchy Etch</title>
+</head>
+<body>
+    <div class="flex-container">
+      <div class="title"><h1>Sketchy Etch</h1></div>
+      <div class="content">
+        <div class="board"></div>
+        <div class="buttons">
+          <button class="blackButton" onclick="changeColor('black')">
+            Black
+          </button>
+          <button class="eraserButton" onclick="changeColor('white')">
+            Eraser
+          </button>
+          <button class="grayButton" onclick="changeColor('gray')">
+            Gray
+          </button>
+          <button class="randomButton" onclick="changeColor('random')">
+            Random
+          </button>
+          <button class="resetButton" onclick="resetBoard()">Reset</button>
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Size of Board"
+            value="16"
+            onchange="changeSize(this.value)"
+          />
+          <button class="setSize">Set Size</button>
+        </div>
+        <div class="error">Input must be between 2 and 100</div>
+        <div class="mode">Mode: Coloring</div>
+      </div>
+      <div class="knobBox">
+      <div class="knob knob1"></div>
+      <div class="knob knob2"></div>
+    </div>
+    </div>
+    
+  </body>
+</html>

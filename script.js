@@ -17,6 +17,7 @@ function makeBoard(size){
             board.insertAdjacentElement('beforeend',block);
 }
 }
+
 makeBoard(16);
 
 function changeSize(input){
@@ -51,8 +52,10 @@ document.querySelector('body').addEventListener("click", (e) => {
   if(e.target.tagName != "BUTTON"){
     click=!click;
     if(click){
+        document.querySelector('.mode').style.textDecoration = "none"
         document.querySelector('.mode').textContent= "Mode: Coloring";
     }else {
+        document.querySelector('.mode').style.textDecoration = "line-through"
         document.querySelector('.mode').textContent= "Mode: Not Coloring";
                 
     }
